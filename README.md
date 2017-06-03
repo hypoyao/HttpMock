@@ -42,7 +42,7 @@ mockRequest(@"GET", @"(.*?)google.com(.*?)".regex);
 ```objc
 mockRequest(@"POST", @"http://www.google.com").
 isUpdatePartResponseBody(YES).
-withBody(@"{\"name\":\"abc\"}".regex);
+withBody(@"{\"name\":\"abc\"}".regex).
 andReturn(200).
 withBody(@"{\"key\":\"value\"}");
 ```
@@ -52,7 +52,7 @@ withBody(@"{\"key\":\"value\"}");
 ```objc
 mockRequest(@"POST", @"http://www.google.com").
 isUpdatePartResponseBody(YES).
-withBody(@"{\"name\":\"abc\"}".regex);
+withBody(@"{\"name\":\"abc\"}".regex).
 andReturn(200).
 withBody(@"google.json");
 ```
